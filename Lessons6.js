@@ -11,6 +11,7 @@ new Function\ new Number\ new Array\
 7lessons
 prototype есть только у конструкторов, функциях. _proto_ ссылка на тележку prototype, а у нее есть сво-во constructor
 рекурсия это (для любой функции при вызове создается lexical enviremant - в нем хранятся аргументы, переменные scope, this, функции)
+ у функции и _proto_  и prorotype/ у объекта только _proto_;
 */
 
 // function f (a) {
