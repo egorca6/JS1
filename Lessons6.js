@@ -3,7 +3,21 @@ o.name
 person['age'] - обращение к объекту.
 o.sayHello();
 o['sayHello']();
-this в момент вызова функции;
+
+this создается в момент вызова функции; - зарезервированное ключевое слово,  ссылается на объект, в рамках контекста(объекта)
+если не в рамках объекта, то сразу на window
+const o = {
+    getThis : function(){  метод или просто getThis()
+        // this === 0
+        function getThat(){
+            // this === 
+            return this;
+        }
+        getThat();
+    },
+}
+o.getThis();
+
 Функция конструктор let o = new Object; слово new;
 return в конструкторе не нужен; конструкторы с большой буквы; нужен для создание объекта.
 new Function\ new Number\ new Array\
