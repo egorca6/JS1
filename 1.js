@@ -35,3 +35,7 @@ const value = document.querySelector('[value]');
 getElementsByName
 value.style.color = 'white';
 submit.style.backgroundColor = 'black';
+// arguments
+// ковычки  зачем o['a'] - потому что, если без них то будет искать переменную a
+// training.by - gomel - 20 weeks /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+// ui - user interface 
