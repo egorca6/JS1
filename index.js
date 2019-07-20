@@ -6,9 +6,14 @@ const h1 = document.createElement('h1');
 const divBtnWrapper = document.createElement('div');
 const btnSave = document.createElement('button');
 const btnCansel = document.createElement('button');
-
+btnSave.textContent = 'Save'; // почему не .value ???
+btnCansel.textContent = 'Cansel';
 h1.innerText = 'Введите пароль';
 
+divWrapper.className = 'wrapper';
+divBtnWrapper.className = 'button-wrapper';
+btnSave.className = 'btn-save';
+btnCansel.className = 'btn-cansel';
 
 divWrapper.appendChild(h1);
 divWrapper.appendChild(input);

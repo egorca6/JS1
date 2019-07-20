@@ -1,18 +1,55 @@
+html, body {
+    height: 100%;
+}
 .root-element{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .wrapper{
-
+    width: 500px;
+    height: 160px;
+background-color: darkgrey;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
 }
 .button-wrapper{
-
+    width: 300px;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    height: 100%;
+  
+    display: flex;
+  justify-content: space-between;
+  height: 100%;
+    
 }
 .btn-save{
+    background-color: rgb(198, 212, 198); 
+    border-radius: 12px;
+    color: black;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
 
 }
 .btn-cansel{
-
+    background-color: rgb(198, 212, 198); 
+    /*border: none;*/
+    border-radius: 12px;
+    color: black;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
   
