@@ -29,20 +29,19 @@ root.appendChild(divWrapper);
 
 let colorB = getComputedStyle(document.body);
 
-function changeBack() {
+setTimeout (function() {
   let userQ = prompt("Какой цвет фона установить");
   document.body.style.backgroundColor = userQ;
   const textForUser = document.createElement('h2');
   textForUser.innerText = 'Цвет фона был установлен ' + userQ;
   divWrapper.appendChild(textForUser); 
-}
-setTimeout(changeBack, 1500);
+}, 1500);
 
-function defaultBack() {
-    colorB.style.backgroundColor = 'white';
-
-  }
-  setTimeout(defaultBack, 3500);
+setTimeout (function() {
+  document.body.style.backgroundColor = 'white';
+    // defaultCol = 'white';
+    divWrapper.removeChild(divWrapper.lastChild);
+  }, 6500);
 
 console.log(colorB.color);
 
