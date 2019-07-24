@@ -35,13 +35,12 @@ setTimeout (function() {
   const textForUser = document.createElement('h2');
   textForUser.innerText = 'Цвет фона был установлен ' + userQ;
   divWrapper.appendChild(textForUser); 
-}, 1500);
-
-setTimeout (function() {
-  document.body.style.backgroundColor = 'white';
-    // defaultCol = 'white';
-    divWrapper.removeChild(divWrapper.lastChild);
-  }, 6500);
+  setTimeout (function() {
+    document.body.style.backgroundColor = 'white';
+      // defaultCol = 'white';
+      divWrapper.removeChild(divWrapper.lastChild);
+}, 3000);
+  }, 200);
 
 console.log(colorB.color);
 
