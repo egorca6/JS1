@@ -11,7 +11,7 @@ btnSave.textContent = 'Save'; // почему не .value ??? // btnSave.innerHT
 btnCansel.textContent = 'Cansel'; //btnCansel.appendChild(document.createTextNode('Egor'))
 h1.innerText = 'Введите пароль';
 
-document.body.style.backgroundColor = 'black';
+document.body.style.backgroundColor = 'green';
 divWrapper.className = 'wrapper';
 divBtnWrapper.className = 'button-wrapper';
 btnSave.className = 'btn-save';
@@ -31,11 +31,21 @@ root.appendChild(divWrapper);
 // defaultColor = ' ';
 function handleSave(e) {
    document.body.style.backgroundColor =  input1.value;
+   const textForUser = document.createElement('h2');
+   textForUser.innerText = 'Цвет фона был установлен ' + input1.value;
+   divWrapper.appendChild(textForUser); 
+   const elem1 = document.querySelector("h3");
+   elem1.remove();
 }
 
 function handleReset(e) {
-  document.body.style.backgroundColor = ' ';
-  // document.body.style.backgroundColor = defaultColor;
+  document.body.style.backgroundColor = 'green';
+  const elem = document.querySelector("h2");
+  elem.remove();
+  const textForUser1 = document.createElement('h3');
+  textForUser1.innerText = 'Цвет фона - стандартный ';
+  divWrapper.appendChild(textForUser1); 
+    // document.body.style.backgroundColor = defaultColor;
 }
 
 btnSave.addEventListener('click', handleSave);
