@@ -1,55 +1,148 @@
 const root = document.getElementById('root');
 
 const divWrapper = document.createElement('div');
-const input = document.createElement('input');
-const input1 = document.createElement('input');
-const h1 = document.createElement('h1');
-const divBtnWrapper = document.createElement('div');
-const btnSave = document.createElement('button');
-const btnCansel = document.createElement('button');
-btnSave.textContent = 'Save'; // почему не .value ??? // btnSave.innerHTML = 'Hello';
-btnCansel.textContent = 'Cansel'; //btnCansel.appendChild(document.createTextNode('Egor'))
-h1.innerText = 'Введите пароль';
+divWrapper.className = 'divWrapper';
+const blockColor = document.createElement('div');
+blockColor.className = 'blockColor';
+const div1 = document.createElement('div');
+div1.className = 'div1';
+const div2 = document.createElement('div');
+div2.className = 'div2';
+const div3 = document.createElement('div');
+div3.className = 'div3';
+const div4 = document.createElement('div');
+div4.className = 'div4';
+const button = document.createElement('button');
 
-document.body.style.backgroundColor = 'green';
-divWrapper.className = 'wrapper';
-divBtnWrapper.className = 'button-wrapper';
-btnSave.className = 'btn-save';
-btnCansel.className = 'btn-cansel';
-input1.setAttribute('type' , 'color')
-input1.setAttribute('value' , '#e66465')
-// btnCansel.setAttribute('button' , 'Cansel');
-divWrapper.appendChild(h1);
-divWrapper.appendChild(input);
-divWrapper.appendChild(input1);
-divWrapper.appendChild(divBtnWrapper);
-divBtnWrapper.appendChild(btnSave);
-divBtnWrapper.appendChild(btnCansel);
+button.textContent = 'changeColor'; 
+
+div1.innerHTML = 'red';
+div2.innerHTML = 'crimson';
+div3.innerHTML = 'deeppink';
+div4.innerHTML = 'plum';
+div1.style.backgroundColor = 'red';
+div2.style.backgroundColor = 'crimson';
+div3.style.backgroundColor = 'deeppink';
+div4.style.backgroundColor = 'blue';
+// blockColor.style.backgroundColor = 'green';
+// div1.setAttribute('backgroundColor' , '#e66465')
+// document.body.style.backgroundColor = 'green';
+blockColor.appendChild(div1);
+blockColor.appendChild(div2);
+blockColor.appendChild(div3);
+blockColor.appendChild(div4);
+divWrapper.appendChild(blockColor);
+divWrapper.appendChild(button);
 root.appendChild(divWrapper);
+
+const backGR = document.body.style.backgroundColor;
+
+function backGR1(){
+  document.body.style.backgroundColor = div1.style.backgroundColor
+}
+function backGR2(){
+  document.body.style.backgroundColor = div2.style.backgroundColor
+}
+function backGR3(){
+  document.body.style.backgroundColor = div3.style.backgroundColor
+}
+function backGR4(){
+  document.body.style.backgroundColor = div4.style.backgroundColor
+}
+
+const randomColor = [
+  'deeppink',
+  'plum',
+  'salmon',
+  'indigo',
+  'slateblue',
+  'beige',
+  'lightgreen'
+]
+function fullRandom(){
+const rand = Math.floor(Math.random() * randomColor.length);
+const randomDiv = randomColor[rand];
+div1 = randomDiv;
+div1 = randomDiv;
+}
+
+// button.addEventListener('click' , function);
+
+div1.addEventListener('mouseover', backGR1);
+div2.addEventListener('mouseover', backGR2);
+div3.addEventListener('mouseover', backGR3);
+div4.addEventListener('mouseover', backGR4);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const input = document.createElement('input');
+// const input1 = document.createElement('input');
+// const h1 = document.createElement('h1');
+// const divBtnWrapper = document.createElement('div');
+// const btnSave = document.createElement('button');
+// const btnCansel = document.createElement('button');
+// btnSave.textContent = 'Save'; // почему не .value ??? // btnSave.innerHTML = 'Hello';
+// btnCansel.textContent = 'Cansel'; //btnCansel.appendChild(document.createTextNode('Egor'))
+// h1.innerText = 'Введите пароль';
+
+// document.body.style.backgroundColor = 'green';
+// divWrapper.className = 'wrapper';
+
+// divBtnWrapper.className = 'button-wrapper';
+// btnSave.className = 'btn-save';
+// btnCansel.className = 'btn-cansel';
+// input1.setAttribute('type' , 'color')
+// input1.setAttribute('value' , '#e66465')
+// // btnCansel.setAttribute('button' , 'Cansel');
+// divWrapper.appendChild(h1);
+// divWrapper.appendChild(input);
+// divWrapper.appendChild(input1);
+// divWrapper.appendChild(divBtnWrapper);
+// divBtnWrapper.appendChild(btnSave);
+// divBtnWrapper.appendChild(btnCansel);
+// root.appendChild(divWrapper);
 // root.insertAdjacentElement
 // const defaultColor = document.body.style.backgroundColor;
 // defaultColor = ' ';
-function handleSave(e) {
-   document.body.style.backgroundColor =  input1.value;
-   const textForUser = document.createElement('h2');
-   textForUser.innerText = 'Цвет фона был установлен ' + input1.value;
-   divWrapper.appendChild(textForUser); 
-   const elem1 = document.querySelector("h3");
-   elem1.remove();
-}
+// function handleSave(e) {
+//    document.body.style.backgroundColor =  input1.value;
+//    const textForUser = document.createElement('h2');
+//    textForUser.className = 'userMess';
+//    textForUser.innerText = 'Цвет фона был установлен ' + input1.value;
+//    root.insertBefore(textForUser, divWrapper); 
+//    const elem1 = document.querySelector("h3");
+//    elem1.remove();
+// }
 
-function handleReset(e) {
-  document.body.style.backgroundColor = 'green';
-  const elem = document.querySelector("h2");
-  elem.remove();
-  const textForUser1 = document.createElement('h3');
-  textForUser1.innerText = 'Цвет фона - стандартный ';
-  divWrapper.appendChild(textForUser1); 
-    // document.body.style.backgroundColor = defaultColor;
-}
+// function handleReset(e) {
+//   document.body.style.backgroundColor = 'green';
+//   const elem = document.querySelector("h2");
+//   elem.remove();
+//   const textForUser1 = document.createElement('h3');
+//   textForUser1.innerText = 'Цвет фона - стандартный ';
+//   divWrapper.appendChild(textForUser1); //prepend
+//     // document.body.style.backgroundColor = defaultColor;
+// }
 
-btnSave.addEventListener('click', handleSave);
-btnCansel.addEventListener('click', handleReset);
+// btnSave.addEventListener('click', handleSave);
+// btnCansel.addEventListener('click', handleReset);
 
 
 // let colorB = getComputedStyle(document.body);
