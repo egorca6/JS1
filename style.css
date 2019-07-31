@@ -3,17 +3,28 @@ html, body {
 }
 .root-element{
     display: flex;
-  justify-content: center;
-  height: 100%;
- 
+    /* justify-content: flex-start; */
+    align-items: center;
+    height: 100%;
+  flex-direction: column;
 
+}
+.header{
+    display: flex;
+    justify-content: flex-start;
 }
 .divWrapper{
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
-   height: 800px;
+    align-items: center;
+   height: 500px;
+   width: 500px;
    
+}
+
+.button{
+    width: 100px;
+    height: 40px;
 }
 .blockColor{
     border : 1px solid green;

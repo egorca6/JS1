@@ -1,97 +1,147 @@
 const root = document.getElementById('root');
 
+const mainH1 = document.createElement('h1');
+const registerH1 = document.createElement('h1');
+const loginH1 = document.createElement('h1');
+
 const divWrapper = document.createElement('div');
+const header = document.createElement('div');
+
+const loginInput = document.createElement('input');
+const passInput = document.createElement('input');
+const passInputConfirm = document.createElement('input');
+
+const mainButton = document.createElement('button');
+const loginButton = document.createElement('button');
+const registerButton = document.createElement('button');
+const saveButton = document.createElement('button');
+const resetButton = document.createElement('button');
+const enterButton = document.createElement('button');
+
 divWrapper.className = 'divWrapper';
-const blockColor = document.createElement('div');
-blockColor.className = 'blockColor';
-const div1 = document.createElement('div');
-div1.className = 'div1';
-const div2 = document.createElement('div');
-div2.className = 'div2';
-const div3 = document.createElement('div');
-div3.className = 'div3';
-const div4 = document.createElement('div');
-div4.className = 'div4';
-const button = document.createElement('button');
+mainButton.className = 'button';
+loginButton.className = 'button';
+registerButton.className = 'button1';
 
-button.textContent = 'changeColor'; 
-
-div1.innerHTML = 'red';
-div2.innerHTML = 'crimson';
-div3.innerHTML = 'deeppink';
-div4.innerHTML = 'plum';
-div1.style.backgroundColor = 'red';
-div2.style.backgroundColor = 'crimson';
-div3.style.backgroundColor = 'deeppink';
-div4.style.backgroundColor = 'blue';
-// blockColor.style.backgroundColor = 'green';
-// div1.setAttribute('backgroundColor' , '#e66465')
-// document.body.style.backgroundColor = 'green';
-blockColor.appendChild(div1);
-blockColor.appendChild(div2);
-blockColor.appendChild(div3);
-blockColor.appendChild(div4);
-divWrapper.appendChild(blockColor);
-divWrapper.appendChild(button);
+// header.appendChild(mainH1);
+// header.appendChild(mainButton);
+// header.appendChild(loginButton);
+divWrapper.appendChild(header);
+divWrapper.appendChild(registerButton);
+root.appendChild(mainH1);
+header.appendChild(mainButton);
+header.appendChild(loginButton);
+root.appendChild(header);
 root.appendChild(divWrapper);
 
-const backGR = document.body.style.backgroundColor;
 
-function backGR1(){
-  document.body.style.backgroundColor = div1.style.backgroundColor
-}
-function backGR2(){
-  document.body.style.backgroundColor = div2.style.backgroundColor
-}
-function backGR3(){
-  document.body.style.backgroundColor = div3.style.backgroundColor
-}
-function backGR4(){
-  document.body.style.backgroundColor = div4.style.backgroundColor
+mainH1.textContent = 'Main';
+mainButton.textContent = 'Main';
+loginButton.textContent = 'Login';
+registerButton.textContent = 'Register';
+
+function registrationUser(){
+  let del = document.querySelector(".button1")
+  del.remove();
+  
+  divWrapper.appendChild(loginInput);
+  divWrapper.appendChild(passInput);
+  divWrapper.appendChild(passInputConfirm);
+  root.appendChild(divWrapper);
 }
 
-const colors = [
-  'deeppink',
-  'plum',
-  'salmon',
-  'indigo',
-  'slateblue',
-  'beige',
-  'lightgreen'
-]
-// function randomColor(colors) {
-//   return colors[Math.floor(Math.random() * colors.length)];
+registerButton.addEventListener('click', registrationUser);
+
+
+
+
+
+
+
+
+
+
+
+// const root = document.getElementById('root');
+
+// const divWrapper = document.createElement('div');
+// divWrapper.className = 'divWrapper';
+// const blockColor = document.createElement('div');
+// blockColor.className = 'blockColor';
+// const div1 = document.createElement('div');
+// div1.className = 'div1';
+// const div2 = document.createElement('div');
+// div2.className = 'div2';
+// const div3 = document.createElement('div');
+// div3.className = 'div3';
+// const div4 = document.createElement('div');
+// div4.className = 'div4';
+// const button = document.createElement('button');
+
+// button.textContent = 'changeColor'; 
+
+// div1.innerHTML = 'red';
+// div2.innerHTML = 'crimson';
+// div3.innerHTML = 'deeppink';
+// div4.innerHTML = 'plum';
+// div1.style.backgroundColor = 'red';
+// div2.style.backgroundColor = 'crimson';
+// div3.style.backgroundColor = 'deeppink';
+// div4.style.backgroundColor = 'blue';
+// // blockColor.style.backgroundColor = 'green';
+// // div1.setAttribute('backgroundColor' , '#e66465')
+// // document.body.style.backgroundColor = 'green';
+// blockColor.appendChild(div1);
+// blockColor.appendChild(div2);
+// blockColor.appendChild(div3);
+// blockColor.appendChild(div4);
+// divWrapper.appendChild(blockColor);
+// divWrapper.appendChild(button);
+// root.appendChild(divWrapper);
+
+// const backGR = document.body.style.backgroundColor;
+
+// function backGR1(){
+//   document.body.style.backgroundColor = div1.style.backgroundColor
 // }
-function randomColor(colors) {
-var randomItem = colors[Math.floor(Math.random() * colors.length)];
-div1 = randomColor(colors);
-div2 = randomColor(colors);
-div3 = randomColor(colors);
-div4 = randomColor(colors);
-}
-// button.addEventListener('click' , function);
-button.addEventListener('click', randomColor);
-div1.addEventListener('mouseover', backGR1);
-div2.addEventListener('mouseover', backGR2);
-div3.addEventListener('mouseover', backGR3);
-div4.addEventListener('mouseover', backGR4);
 
+// function backGR2(){
+//   document.body.style.backgroundColor = div2.style.backgroundColor
+// }
 
+// function backGR3(){
+//   document.body.style.backgroundColor = div3.style.backgroundColor
+// }
 
+// function backGR4(){
+//   document.body.style.backgroundColor = div4.style.backgroundColor
+// }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// const colors = [
+//   'deeppink',
+//   'plum',
+//   'salmon',
+//   'indigo',
+//   'slateblue',
+//   'beige',
+//   'lightgreen'
+// ]
+// // function randomColor(colors) {
+// //   return colors[Math.floor(Math.random() * colors.length)];
+// // }
+// function randomColor(colors) {
+// var randomItem = colors[Math.floor(Math.random() * colors.length)];
+// div1 = randomColor(colors);
+// div2 = randomColor(colors);
+// div3 = randomColor(colors);
+// div4 = randomColor(colors);
+// }
+// // button.addEventListener('click' , function);
+// button.addEventListener('click', randomColor);
+// div1.addEventListener('mouseover', backGR1);
+// div2.addEventListener('mouseover', backGR2);
+// div3.addEventListener('mouseover', backGR3);
+// div4.addEventListener('mouseover', backGR4);
 
 
 
