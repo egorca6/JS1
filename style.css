@@ -11,33 +11,25 @@ html, body {
 .divWrapper{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
    height: 800px;
    
 }
 .blockColor{
-    border : 2px solid green;
+    border : 1px solid green;
    height: 600px;
    width: 600px;
    display: flex;
-   flex-wrap: wrap;
-   align-content: center;
-   flex-direction: column;
-  /*
-   
-   
-    */
-   
-   
-  
-}
+       flex-wrap: wrap; 
+       flex-direction: column;
+   }
 
 
-.div1, .div2, .div3, .div4 {
-    
-    border : 1px solid black;
+.div1, .div2, .div3, .div4 {  
     height: 300px;
     width: 300px;
-
- 
-  
-}
+  }
+.div3, .div4{
+    display: flex;
+    }
+    

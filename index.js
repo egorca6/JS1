@@ -50,7 +50,7 @@ function backGR4(){
   document.body.style.backgroundColor = div4.style.backgroundColor
 }
 
-const randomColor = [
+const colors = [
   'deeppink',
   'plum',
   'salmon',
@@ -59,15 +59,18 @@ const randomColor = [
   'beige',
   'lightgreen'
 ]
-function fullRandom(){
-const rand = Math.floor(Math.random() * randomColor.length);
-const randomDiv = randomColor[rand];
-div1 = randomDiv;
-div1 = randomDiv;
+// function randomColor(colors) {
+//   return colors[Math.floor(Math.random() * colors.length)];
+// }
+function randomColor(colors) {
+var randomItem = colors[Math.floor(Math.random() * colors.length)];
+div1 = randomColor(colors);
+div2 = randomColor(colors);
+div3 = randomColor(colors);
+div4 = randomColor(colors);
 }
-
 // button.addEventListener('click' , function);
-
+button.addEventListener('click', randomColor);
 div1.addEventListener('mouseover', backGR1);
 div2.addEventListener('mouseover', backGR2);
 div3.addEventListener('mouseover', backGR3);
