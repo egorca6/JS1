@@ -5,6 +5,7 @@ const registerH1 = document.createElement('h1');
 const loginH1 = document.createElement('h1');
 
 const divWrapper = document.createElement('div');
+const divWrapperRegistration = document.createElement('div');
 const header = document.createElement('div');
 
 const loginInput = document.createElement('input');
@@ -22,10 +23,12 @@ divWrapper.className = 'divWrapper';
 mainButton.className = 'button';
 loginButton.className = 'button';
 registerButton.className = 'button1';
+divWrapperRegistration.className = 'divWrapperRegistration';
 
 // header.appendChild(mainH1);
 // header.appendChild(mainButton);
 // header.appendChild(loginButton);
+
 divWrapper.appendChild(header);
 divWrapper.appendChild(registerButton);
 root.appendChild(mainH1);
@@ -39,22 +42,27 @@ mainH1.textContent = 'Main';
 mainButton.textContent = 'Main';
 loginButton.textContent = 'Login';
 registerButton.textContent = 'Register';
+saveButton.textContent = 'Save';
+resetButton.textContent = 'Reset';
 
 function registrationUser(){
-  let del = document.querySelector(".button1")
+  let del = document.querySelector(".divWrapper")
   del.remove();
   
-  divWrapper.appendChild(loginInput);
-  divWrapper.appendChild(passInput);
-  divWrapper.appendChild(passInputConfirm);
-  root.appendChild(divWrapper);
+  divWrapperRegistration.appendChild(loginInput);
+  divWrapperRegistration.appendChild(passInput);
+  divWrapperRegistration.appendChild(passInputConfirm);
+  divWrapperRegistration.appendChild(saveButton);
+  divWrapperRegistration.appendChild(resetButton);
+  root.appendChild(divWrapperRegistration);
 }
 
 registerButton.addEventListener('click', registrationUser);
 
-
-
-
+// oninput на повторе пароля
+//http://programmerbook.ru/html/input/type/password/
+// в локал сторидж user - key . value [{login : 1 , password 2, name: 'Ivan'}] for ич
+// localStorage.setItem(key, value);
 
 
 

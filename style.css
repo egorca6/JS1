@@ -22,6 +22,16 @@ html, body {
    
 }
 
+.divWrapperRegistration{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   height: 300px;
+   width: 300px;
+
+}
+
 .button{
     width: 100px;
     height: 40px;
