@@ -72,7 +72,7 @@ function returnMain(){
 }
 
 function loginUser(){
-  var del1 = document.getElementsByTagName('form')[0];
+  let del1 = document.getElementsByTagName('form')[0];
   del1.remove();
   formLogin.appendChild(loginInput);
   formLogin.appendChild(passInput);
@@ -87,6 +87,9 @@ function loginUser(){
 registerButton.addEventListener('click', registrationUser);
 mainButton.addEventListener('click', returnMain);
 loginButton.addEventListener('click', loginUser);
+
+
+callback/ callback Hell/ promise
 
 // oninput на повторе пароля
 //http://programmerbook.ru/html/input/type/password/
