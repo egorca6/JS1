@@ -5,12 +5,17 @@ const registerH1 = document.createElement('h1');
 const loginH1 = document.createElement('h1');
 
 const divWrapper = document.createElement('div');
-const divWrapperRegistration = document.createElement('div');
+const formRegistration = document.createElement('form');
 const header = document.createElement('div');
+const formLogin = document.createElement('form');
+const formButtonReg = document.createElement('form');
 
 const loginInput = document.createElement('input');
 const passInput = document.createElement('input');
 const passInputConfirm = document.createElement('input');
+loginInput.setAttribute('placeholder' , 'writeLogin');
+passInput.setAttribute('placeholder' , 'writePassword');
+passInputConfirm.setAttribute('placeholder' , 'repeatePassword');
 
 const mainButton = document.createElement('button');
 const loginButton = document.createElement('button');
@@ -18,24 +23,25 @@ const registerButton = document.createElement('button');
 const saveButton = document.createElement('button');
 const resetButton = document.createElement('button');
 const enterButton = document.createElement('button');
+resetButton.setAttribute('type' , 'reset');
 
 divWrapper.className = 'divWrapper';
 mainButton.className = 'button';
 loginButton.className = 'button';
 registerButton.className = 'button1';
-divWrapperRegistration.className = 'divWrapperRegistration';
+
 
 // header.appendChild(mainH1);
 // header.appendChild(mainButton);
 // header.appendChild(loginButton);
 
 divWrapper.appendChild(header);
-divWrapper.appendChild(registerButton);
+formButtonReg.appendChild(registerButton);
 root.appendChild(mainH1);
 header.appendChild(mainButton);
 header.appendChild(loginButton);
 root.appendChild(header);
-root.appendChild(divWrapper);
+root.appendChild(formButtonReg);
 
 
 mainH1.textContent = 'Main';
@@ -46,18 +52,41 @@ saveButton.textContent = 'Save';
 resetButton.textContent = 'Reset';
 
 function registrationUser(){
-  let del = document.querySelector(".divWrapper")
-  del.remove();
-  
-  divWrapperRegistration.appendChild(loginInput);
-  divWrapperRegistration.appendChild(passInput);
-  divWrapperRegistration.appendChild(passInputConfirm);
-  divWrapperRegistration.appendChild(saveButton);
-  divWrapperRegistration.appendChild(resetButton);
-  root.appendChild(divWrapperRegistration);
+ 
+  let del1 = document.getElementsByTagName('form')[0];
+  del1.remove();
+  formRegistration.appendChild(loginInput);
+  formRegistration.appendChild(passInput);
+  formRegistration.appendChild(passInputConfirm);
+  formRegistration.appendChild(saveButton);
+  formRegistration.appendChild(resetButton);
+  root.appendChild(formRegistration);
 }
 
+function returnMain(){
+
+  let del1 = document.getElementsByTagName('form')[0];
+  del1.remove();
+  formButtonReg.appendChild(registerButton);
+  root.appendChild(formButtonReg);
+}
+
+function loginUser(){
+  var del1 = document.getElementsByTagName('form')[0];
+  del1.remove();
+  formLogin.appendChild(loginInput);
+  formLogin.appendChild(passInput);
+  formLogin.appendChild(saveButton);
+  root.appendChild(formLogin);  
+}
+  
+ 
+  
+
+
 registerButton.addEventListener('click', registrationUser);
+mainButton.addEventListener('click', returnMain);
+loginButton.addEventListener('click', loginUser);
 
 // oninput на повторе пароля
 //http://programmerbook.ru/html/input/type/password/
